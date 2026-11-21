@@ -1,3 +1,6 @@
-entry.png binary
-poster.html text
 .f816/
+crop_*.png
+i1.png
+i2.png
+i3.png
+__pycache__/
