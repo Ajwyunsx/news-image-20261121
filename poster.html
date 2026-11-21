@@ -2,362 +2,346 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>The World Ledger — Saturday 21 November 2026</title>
+<title>The World Today — Saturday 21 November 2026</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-
-  html, body {
-    width:1024px; height:1024px;
-    background:#f3eee3;
-    overflow:hidden;
-  }
-
+  html, body { width:1024px; height:1024px; background:#f3eee3; overflow:hidden; }
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
-    color:#17130e;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  .page {
-    width:1024px; height:1024px;
-    padding:26px 42px 16px;
-    display:flex; flex-direction:column;
-  }
-
-  /* ---------- top strip ---------- */
-  .strip {
-    display:flex; align-items:baseline; justify-content:space-between;
-    font-size:9px; letter-spacing:1.9px; text-transform:uppercase;
-    font-weight:700; color:#4a4239;
-    padding-bottom:6px;
-    border-bottom:1px solid #17130e;
-    flex:0 0 auto;
-  }
-  .strip .r { letter-spacing:1.4px; font-weight:400; color:#5a5046; }
-
-  /* ---------- masthead ---------- */
-  .masthead {
-    display:flex; align-items:flex-end; justify-content:space-between;
-    padding:11px 0 9px;
-    flex:0 0 auto;
-  }
-  h1 {
     font-family: Georgia, "Liberation Serif", "DejaVu Serif", serif;
-    font-size:67px;
-    line-height:0.9;
-    font-weight:700;
-    letter-spacing:-1.9px;
+    color:#17130e; -webkit-font-smoothing:antialiased;
   }
+  .page { width:1024px; height:1024px; padding:22px 34px 16px; display:flex; flex-direction:column; }
+
+  /* top strip */
+  .strip {
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:8.6px; letter-spacing:1.9px; text-transform:uppercase; font-weight:700;
+    color:#4a4239; padding-bottom:5px; border-bottom:1px solid #17130e;
+  }
+  .strip .r { font-weight:400; letter-spacing:1.4px; color:#6a5f50; }
+
+  /* masthead */
+  .masthead { display:flex; align-items:flex-end; justify-content:space-between; padding:10px 0 8px; }
+  h1 { font-size:64px; line-height:.92; font-weight:700; letter-spacing:-1.6px; }
   .mast-right {
-    text-align:right;
-    font-size:8.5px; letter-spacing:1.7px; text-transform:uppercase;
-    line-height:1.8; color:#6a5f52;
-    padding-bottom:5px;
-    font-weight:700;
+    text-align:right; font-family:Helvetica,Arial,sans-serif;
+    font-size:8.2px; letter-spacing:1.8px; text-transform:uppercase; line-height:1.85;
+    color:#6a5f50; padding-bottom:4px; font-weight:700;
   }
   .mast-right b { color:#17130e; }
-  .mast-rule { height:5px; background:#b31b1b; flex:0 0 auto; }
-  .mast-rule-thin { height:1px; background:#17130e; margin-top:2px; flex:0 0 auto; }
+  .rule-red { height:5px; background:#b31b1b; }
+  .rule-thin { height:1px; background:#17130e; margin-top:2px; }
 
-  /* ---------- dateline ---------- */
-  .dateline {
-    display:flex; align-items:center; justify-content:space-between;
-    padding:13px 0 12px;
-    border-bottom:2px solid #17130e;
-    flex:0 0 auto;
+  /* dateline */
+  .dateline { display:flex; align-items:baseline; justify-content:space-between; padding:9px 0 8px; }
+  .dateline .day { font-size:34px; letter-spacing:-.4px; line-height:1; }
+  .dateline .day em { font-style:normal; color:#b31b1b; font-weight:700; }
+  .dateline .meta {
+    font-family:Helvetica,Arial,sans-serif; font-size:8.6px; letter-spacing:1.7px;
+    text-transform:uppercase; color:#6a5f50; font-weight:700; text-align:right; line-height:1.9;
   }
-  .date-main {
-    font-family: Georgia, "Liberation Serif", "DejaVu Serif", serif;
-    font-size:41px; font-weight:700; letter-spacing:-0.7px;
-    line-height:1;
-  }
-  .date-main .d { color:#b31b1b; }
-  .dateline .side {
-    text-align:right; font-size:8.5px; letter-spacing:2.2px;
-    text-transform:uppercase; line-height:1.8; color:#4a4239;
-    font-weight:700;
-  }
-  .dateline .side em { font-style:normal; color:#8a8074; font-weight:400; }
+  .dateline .meta b { color:#17130e; }
 
-  /* ---------- kicker ---------- */
+  .standfirst {
+    font-style:italic; font-size:14.2px; line-height:1.42; color:#3b342a;
+    padding:7px 0 0; border-top:1px solid rgba(23,19,14,.28);
+  }
+
+  /* shared */
   .kicker {
-    display:flex; align-items:center; justify-content:space-between;
-    font-size:8.5px; letter-spacing:1.9px; text-transform:uppercase;
-    font-weight:700; color:#b31b1b;
-    padding-bottom:5px;
-    border-bottom:1px solid rgba(23,19,14,0.35);
+    font-family:Helvetica,Arial,sans-serif; font-size:8.4px; letter-spacing:1.7px;
+    text-transform:uppercase; font-weight:700; color:#b31b1b;
   }
-  .kicker svg { display:block; }
+  h2, h3 { font-weight:700; }
+  p { font-family:Helvetica,Arial,sans-serif; color:#3d3529; }
+  svg { display:block; }
 
-  /* ---------- lead ---------- */
-  .lead {
-    padding:15px 0 9px;
-    border-bottom:1px solid #17130e;
-    flex:0 0 auto;
+  /* main band */
+  .band { display:flex; gap:0; flex:1 1 auto; min-height:0; padding-top:11px; }
+  .lead { flex:1 1 auto; padding-right:18px; border-right:1px solid rgba(23,19,14,.3); display:flex; flex-direction:column; min-width:0; }
+  .lead .head { display:flex; justify-content:space-between; align-items:flex-start; gap:14px; }
+  .lead h2 { font-size:34px; line-height:1.07; letter-spacing:-.6px; margin-top:6px; max-width:545px; }
+  .lead .dek { font-size:12.4px; line-height:1.48; margin:8px 0 0; }
+  .lead .cols {
+    display:flex; gap:16px; margin-top:9px; flex:1 1 auto; min-height:0; overflow:hidden;
   }
-  .lead-body {
-    display:grid; grid-template-columns: 1fr 128px; gap:32px;
-    align-items:start;
-  }
-  .lead h2 {
-    font-family: Georgia, "Liberation Serif", "DejaVu Serif", serif;
-    font-size:48px; line-height:1.0; letter-spacing:-1.1px;
-    font-weight:700; margin-top:10px;
-  }
-  .lead .dek {
-    font-size:14.5px; line-height:1.52; color:#2b241b;
-    margin-top:10px;
-  }
-  .lead-art { padding-top:24px; }
+  .lead .cols .col { flex:1 1 0; font-size:10.4px; line-height:1.55; text-align:justify; }
+  .lead .cols .col p { margin-bottom:7px; }
+  .lead .cols .col p:last-child { margin-bottom:0; }
+  .lead .cols .col:first-child p:first-child::first-letter { font-size:26px; line-height:.86; float:left; padding:3px 4px 0 0; font-weight:700; }
+  .lead .figures { display:flex; gap:0; margin-top:11px; border-top:1px solid #17130e; padding-top:8px; }
+  .lead .figures > div { flex:1 1 0; padding-right:12px; }
+  .lead .figures > div + div { padding-left:12px; border-left:1px solid rgba(23,19,14,.24); }
+  .lead .figures b { display:block; font-size:19px; line-height:1; letter-spacing:-.3px; }
+  .lead .figures span { display:block; margin-top:3px; font-family:Helvetica,Arial,sans-serif; font-size:8.4px; line-height:1.34; color:#5a5046; }
 
-  /* ---------- grid ---------- */
-  .gridwrap {
-    flex:1 1 auto;
-    display:flex; flex-direction:column;
-    min-height:0;
+  .lead .quote {
+    margin-top:auto; padding:11px 0 0; border-top:2px solid #17130e;
   }
-  .row {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    flex:1 1 0;
-    min-height:0;
+  .lead .quote blockquote {
+    font-size:16.5px; line-height:1.32; font-style:italic; letter-spacing:-.2px;
   }
+  .lead .quote cite {
+    display:block; margin-top:5px; font-family:Helvetica,Arial,sans-serif;
+    font-style:normal; font-size:8.4px; letter-spacing:1.5px; text-transform:uppercase;
+    color:#6a5f50; font-weight:700;
+  }
+
+  .side { flex:0 0 268px; padding-left:18px; display:flex; flex-direction:column; }
+  .item { padding-bottom:11px; margin-bottom:11px; border-bottom:1px solid rgba(23,19,14,.26); }
+  .item:last-child { border-bottom:0; margin-bottom:0; padding-bottom:0; }
+  .item .row { display:flex; gap:10px; align-items:flex-start; }
+  .item .row > div:first-child { flex:1 1 auto; min-width:0; }
+  .item .row > svg { margin-top:3px; }
+  .item h3 { font-size:18.5px; line-height:1.13; margin:4px 0 5px; letter-spacing:-.3px; }
+  .item p { font-size:10px; line-height:1.44; }
+  .item .fact {
+    font-family:Helvetica,Arial,sans-serif; font-size:8.8px; line-height:1.4;
+    margin-top:5px; padding-top:5px; border-top:1px solid rgba(23,19,14,.16);
+  }
+  .item .fact b { color:#b31b1b; }
+
+  /* bottom grid */
+  .grid { display:flex; flex-wrap:wrap; border-top:2px solid #17130e; margin-top:12px; }
   .cell {
-    padding:13px 20px 10px 0;
+    flex:0 0 33.333%; padding:10px 14px 9px; border-left:1px solid rgba(23,19,14,.24);
+    border-bottom:1px solid rgba(23,19,14,.2);
     display:flex; flex-direction:column;
-    overflow:hidden;
   }
-  .cell + .cell { padding-left:20px; border-left:1px solid rgba(23,19,14,0.35); }
-  .cell:last-child { padding-right:0; }
-  .cell h3 {
-    font-family: Georgia, "Liberation Serif", "DejaVu Serif", serif;
-    font-size:24px; line-height:1.08; letter-spacing:-0.35px;
-    font-weight:700; margin-top:9px;
-  }
-  .cell p {
-    font-size:12.8px; line-height:1.46; color:#2f2820;
-    margin-top:8px;
-  }
-  .cell p.dek2 { margin-top:6px; color:#4a4239; }
-  .brief {
-    margin-top:auto;
-    min-height:34px;
-    padding-top:8px;
-    border-top:1px solid rgba(23,19,14,0.25);
-    display:flex; gap:7px;
-    font-size:10.4px; line-height:1.4; color:#4a4239;
-  }
-  .brief .b { color:#b31b1b; font-weight:700; }
-  .hrule { height:1px; background:#17130e; flex:0 0 auto; }
+  .cell:nth-child(3n+1) { border-left:0; padding-left:0; }
+  .cell:nth-child(3n) { padding-right:0; }
+  .cell .kh { display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; }
+  .cell h3 { font-size:15.4px; line-height:1.14; letter-spacing:-.25px; margin-bottom:4px; }
+  .cell p { font-size:9.7px; line-height:1.42; }
 
-  /* ---------- footer ---------- */
-  .foot {
-    display:flex; align-items:center; justify-content:space-between;
-    border-top:2px solid #17130e;
-    margin-top:5px; padding-top:7px;
-    font-size:8px; letter-spacing:1.8px; text-transform:uppercase;
-    color:#4a4239; font-weight:700;
-    flex:0 0 auto;
+  /* ticker */
+  .ticker {
+    display:flex; align-items:baseline; gap:10px; margin-top:9px;
+    border-top:1px solid rgba(23,19,14,.55); padding-top:6px;
   }
-  .foot .dots { color:#b31b1b; }
+  .ticker .label {
+    font-family:Helvetica,Arial,sans-serif; font-size:8.4px; font-weight:700;
+    letter-spacing:1.7px; text-transform:uppercase; color:#b31b1b; flex:0 0 auto;
+  }
+  .ticker .items { display:flex; flex:1 1 auto; min-width:0; }
+  .ticker .items span {
+    flex:1 1 0; min-width:0;
+    font-family:Helvetica,Arial,sans-serif; font-size:9.3px; line-height:1.34; color:#3d3529;
+    padding:0 10px; border-left:1px solid rgba(23,19,14,.28);
+  }
+  .ticker .items span:first-child { border-left:0; padding-left:0; }
+  .ticker .items span:last-child { padding-right:0; }
+  .ticker b { font-weight:700; color:#17130e; }
 </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- top strip -->
   <div class="strip">
-    <span>Global edition &middot; weekend review</span>
-    <span class="r">Seven stories &middot; five regions &middot; one page</span>
+    <span>Global edition &middot; Weekend review</span>
+    <span class="r">Ten stories &middot; five regions &middot; one page</span>
   </div>
 
-  <!-- masthead -->
   <div class="masthead">
-    <h1>The World Ledger</h1>
+    <h1>The World Today</h1>
     <div class="mast-right">
-      <b>One day &middot; seven stories</b><br>
-      five regions &middot; no. 326
+      <b>World affairs</b> &middot; markets<br>
+      climate &middot; science &middot; sport
     </div>
   </div>
-  <div class="mast-rule"></div>
-  <div class="mast-rule-thin"></div>
+  <div class="rule-red"></div>
+  <div class="rule-thin"></div>
 
-  <!-- dateline -->
   <div class="dateline">
-    <div class="date-main">Saturday <span class="d">21</span> November 2026</div>
-    <div class="side">
-      All times UTC<br>
-      <em>Final edition</em>
-    </div>
+    <div class="day">Saturday <em>21 November 2026</em></div>
+    <div class="meta">All times UTC &middot; <b>midday edition</b><br>Compiled from wire reports</div>
   </div>
 
-  <!-- lead -->
-  <section class="lead">
-    <div class="kicker">
-      <span>Middle East &middot; Conflict</span>
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#17130e" stroke-width="1.5" stroke-linecap="square">
-        <path d="M3 24 H25"/>
-        <path d="M6 24 V17 H11 V24"/>
-        <path d="M12 24 V12 H17 V24"/>
-        <path d="M18 24 V19 H22 V24"/>
-        <path d="M5 8 C11 4 19 4 24 7" stroke="#b31b1b" stroke-dasharray="3 2.5"/>
-      </svg>
-    </div>
-    <div class="lead-body">
-      <div>
-        <h2>Houthi missiles reach<br>Riyadh&rsquo;s skyline</h2>
-        <p class="dek">Saudi air defences intercepted three ballistic missiles over the capital for a third
-        night running, after the Saudi-led coalition struck Hodeidah and Sanaa. The Houthis answered by
-        threatening Jeddah&rsquo;s port.</p>
-      </div>
-      <div class="lead-art">
-        <svg width="118" height="118" viewBox="0 0 112 112" fill="none" stroke="#17130e" stroke-width="2.2" stroke-linecap="square">
-          <path d="M4 100 H108"/>
-          <path d="M10 100 V62 H26 V100"/>
-          <path d="M20 100 V78 H34 V100"/>
-          <path d="M30 100 V40 H56 V100"/>
-          <path d="M31 40 L43 22 L55 40"/>
-          <path d="M43 22 V14"/>
-          <path d="M60 100 V70 H74 V100"/>
-          <path d="M78 100 V54 H96 V100"/>
-          <path d="M1 28 C20 12 44 9 66 19" stroke="#b31b1b" stroke-dasharray="7 5"/>
-          <circle cx="66" cy="19" r="3.2" fill="#b31b1b" stroke="none"/>
+  <div class="standfirst">A climate summit runs past its deadline with the words &ldquo;fossil fuels&rdquo; deleted from its draft. Missiles are intercepted over Riyadh. A Japanese&ndash;European spacecraft begins its arrival at Mercury. And on Wall Street, the artificial-intelligence trade comes apart.</div>
+
+  <div class="band">
+    <div class="lead">
+      <div class="head">
+        <div>
+          <div class="kicker">Climate &middot; Antalya</div>
+          <h2>Summit runs overtime as the fossil-fuel words vanish</h2>
+        </div>
+        <svg width="54" height="54" viewBox="0 0 62 62" fill="none" stroke="#17130e" stroke-width="1.5">
+          <path d="M13 5h26l11 11v41H13z"/>
+          <path d="M39 5v11h11"/>
+          <path d="M19 24h22M19 30h22M19 36h14M19 42h18" stroke-opacity=".38"/>
+          <path d="M16.5 30 47 30" stroke="#b31b1b" stroke-width="3.4"/>
+          <path d="M16.5 36.4 40 36.4" stroke="#b31b1b" stroke-width="2.2" stroke-opacity=".55"/>
         </svg>
       </div>
-    </div>
-  </section>
+      <p class="dek">COP31 was due to close on Friday evening. It did not. A third draft of the Antalya text is promised today, after the second removed every mention of coal, oil and gas and dropped a $120bn adaptation target.</p>
 
-  <!-- grid -->
-  <section class="gridwrap">
-
-    <div class="row">
-
-      <div class="cell">
-        <div class="kicker">
-          <span>Americas &middot; Markets</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6" stroke-linecap="square">
-            <path d="M2 21 H22"/>
-            <path d="M3 5 V21"/>
-            <path d="M4 9 L9 13 L13 10 L20 18" stroke="#b31b1b"/>
-            <path d="M20 18 L20 12.5" stroke="#b31b1b"/>
-            <path d="M20 18 L14.5 18" stroke="#b31b1b"/>
-          </svg>
+      <div class="cols">
+        <div class="col">
+          <p>The conference opened in Antalya on 9 November for what was meant to be twelve days. By Friday evening the plenary chamber was still full and the deadline had gone: Murat Kurum, Turkey&rsquo;s environment minister and president of COP31, adjourned the session with a promise that teams would work overnight on a third revision of his proposed decision.</p>
+          <p>Delegates did adopt technical decisions on Friday, including cooperation under Article 6 of the Paris Agreement. The wider political package &mdash; finance, emissions, adaptation, a just transition &mdash; stayed open.</p>
+          <p>At least 23 countries had objected to the missing fossil-fuel language. France and Panama led the demand that it be put back.</p>
         </div>
-        <h3>AI trade cracks and the Nasdaq loses its 2026 gains</h3>
-        <p>The index fell 5.3% to 22,617.73 &mdash; its worst week in six years. Nvidia slid 14% after an SEC
-        accounting report; the S&amp;P 500 and Dow both entered correction.</p>
-        <p class="dek2">The Dow lost 8% on the week, its worst since March 2020, and the S&amp;P 500 shed 8.6%.</p>
-        <div class="brief"><span class="b">&#9632;</span><span>Bitcoin broke below $60,000 and the VIX jumped
-        26% to 36 as risk appetite drained away.</span></div>
+        <div class="col">
+          <p>What changed between drafts is the story. Thursday&rsquo;s version halved the text, deleted the $120bn adaptation figure in favour of a promise to &ldquo;at least triple adaptation finance by 2035&rdquo;, and pushed the detail into an &ldquo;Antalya-to-Addis Ababa Roadmap&rdquo;.</p>
+          <p>Chris Bowen, Australia&rsquo;s climate minister, who leads the negotiations, argued that this COP was about implementation rather than reopening old commitments.</p>
+          <p>It also kept the presidency&rsquo;s &ldquo;35 by 35&rdquo; goal &mdash; 35% of final energy consumed as electricity by 2035 &mdash; without saying the power must be clean, and leaned hard on carbon capture. For the first time, a COP text concedes that 1.5&deg;C will be overshot.</p>
+        </div>
       </div>
 
-      <div class="cell">
-        <div class="kicker">
-          <span>Europe &middot; Climate</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6" stroke-linecap="square">
-            <path d="M12 3 C12 3 6 10 6 14.5 A6 6 0 0 0 18 14.5 C18 10 12 3 12 3 Z"/>
-            <path d="M9.5 15.5 H14.5" stroke="#b31b1b"/>
-            <path d="M12 6.5 V15" stroke="#b31b1b"/>
-          </svg>
-        </div>
-        <h3>Antalya talks run past their deadline</h3>
-        <p>COP31 entered overtime after a draft deleted every reference to fossil fuels and a $120bn adaptation
-        target. A third text was due on Saturday.</p>
-        <p class="dek2">Nearly 200 delegations must still adopt a cover decision.</p>
-        <div class="brief"><span class="b">&#9632;</span><span>France and Panama led calls to restore the
-        fossil-fuel language.</span></div>
+      <div class="figures">
+        <div><b>$305bn</b><span>Adaptation needs a year by 2035, says the draft</span></div>
+        <div><b>23</b><span>Countries that objected to dropping fossil fuels</span></div>
+        <div><b>1.5&deg;C</b><span>The limit the draft concedes will be overshot</span></div>
       </div>
 
-      <div class="cell">
-        <div class="kicker">
-          <span>Asia &middot; Diplomacy</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6" stroke-linecap="square">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M3 12 H21"/>
-            <path d="M12 3 C15 6.5 15 17.5 12 21 C9 17.5 9 6.5 12 3 Z"/>
-            <circle cx="12" cy="12" r="2" fill="#b31b1b" stroke="none"/>
-          </svg>
-        </div>
-        <h3>Xi leaves Shenzhen holding the stronger hand</h3>
-        <p>Trump called the summit a win, but analysts say Beijing kept the trade truce exactly where it likes
-        it &mdash; unresolved, and renewable on its terms.</p>
-        <p class="dek2">The truce expires on 10 January; an extension is expected at the G20 in Miami next
-        month.</p>
-        <div class="brief"><span class="b">&#9632;</span><span>China is on track for its soybean pledge;
-        rare-earth shipments remain far below pre-war levels.</span></div>
+      <div class="quote">
+        <blockquote>&ldquo;It is not acceptable to have a COP or a cover document that does not even mention fossil fuels, and we simply will not put up with it.&rdquo;</blockquote>
+        <cite>Juan Carlos Navarro, Panama&rsquo;s environment minister, in Antalya on Friday</cite>
       </div>
-
     </div>
 
-    <div class="hrule"></div>
-
-    <div class="row">
-
-      <div class="cell">
-        <div class="kicker">
-          <span>Science &middot; Space</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6" stroke-linecap="square">
-            <circle cx="7" cy="14" r="4"/>
-            <circle cx="16.5" cy="8" r="6.5"/>
-            <path d="M4 8.5 C2 10 1.5 12 2.5 13.5" stroke="#b31b1b"/>
-            <path d="M19 21 L21.5 23" stroke="#b31b1b"/>
-            <circle cx="16.5" cy="8" r="1.4" fill="#b31b1b" stroke="none"/>
+    <div class="side">
+      <div class="item">
+        <div class="row">
+          <div>
+            <div class="kicker">Middle East</div>
+            <h3>Three missiles over Riyadh, eight alerts in a day</h3>
+            <p>Saudi air defences destroyed three Houthi ballistic missiles over the capital early today, plus a drone aimed at the south.</p>
+            <div class="fact"><b>&#9632;</b> Two more missiles aimed at Jazan were destroyed on Friday; debris fell at Al-Shuqaiq.</div>
+          </div>
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#17130e" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M14 3.5c2.6 3.4 4 7 4 10.4 0 3.5-1.4 6.6-4 9.1-2.6-2.5-4-5.6-4-9.1C10 10.5 11.4 6.9 14 3.5z"/>
+            <path d="M10.6 16.4h6.8" stroke-opacity=".5"/>
+            <path d="M9.4 23.5c2.9 1.4 6.3 1.4 9.2 0" stroke="#b31b1b" stroke-width="1.7"/>
           </svg>
         </div>
-        <h3>BepiColombo slips into orbit at Mercury</h3>
-        <p>After eight years and six flybys, Europe and Japan&rsquo;s paired orbiters began the first survey of
-        the planet since Messenger. Science starts in April.</p>
-        <p class="dek2">It is only the second mission ever to orbit Mercury, and the first with two spacecraft at
-        once.</p>
-        <div class="brief"><span class="b">&#9632;</span><span>The UK-built MIXS instrument has already caught
-        X-rays from the Crab Nebula on the way in.</span></div>
       </div>
 
-      <div class="cell">
-        <div class="kicker">
-          <span>Africa &middot; Society</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.5" stroke-linecap="square">
-            <rect x="3.2" y="2.6" width="17.6" height="18.8"/>
-            <circle cx="12" cy="9.4" r="3.1"/>
-            <path d="M6.4 19.4 C6.9 15.6 9.1 13.8 12 13.8 C14.9 13.8 17.1 15.6 17.6 19.4"/>
+      <div class="item">
+        <div class="row">
+          <div>
+            <div class="kicker">Europe &middot; Ukraine</div>
+            <h3>Another night of drones, and Kryvyi Rih takes the worst</h3>
+            <p>Russia fired three ballistic missiles and 148 drones overnight; a boy of seven and a 20-year-old paramedic were killed in Kryvyi Rih.</p>
+            <div class="fact"><b>&#9632;</b> Eleven people, two of them children, were wounded by a drone that hit a five-storey block in Kharkiv region.</div>
+          </div>
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#17130e" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M6 10h16M9 10v7h10v-7"/>
+            <path d="M4 20h20" stroke-width="1.8"/>
+            <path d="M14 10V5"/>
+            <path d="M11 5h6" stroke="#b31b1b" stroke-width="1.7"/>
+            <path d="M7 17v3M21 17v3" stroke-opacity=".45"/>
           </svg>
         </div>
-        <h3>Mlambo-Ngcuka,<br>1955&ndash;2026</h3>
-        <p>South Africa&rsquo;s first woman deputy president, later head of UN Women, died at 71. The UN, the ANC
-        and UNAIDS led the tributes.</p>
-        <p class="dek2">She held the deputy presidency from 2005 to 2008 and led UN Women from 2013 to 2021.</p>
-        <div class="brief"><span class="b">&#9632;</span><span>UNAIDS called her &ldquo;a fearless feminist
-        leader&rdquo; who put women at the centre of the HIV response.</span></div>
       </div>
 
-      <div class="cell">
-        <div class="kicker">
-          <span>Americas &middot; Sport</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.5" stroke-linecap="square">
-            <path d="M7 3 H17 V9.5 A5 5 0 0 1 7 9.5 Z"/>
-            <path d="M7 5.2 H3.6 V7.4 A3.4 3.4 0 0 0 7 10.8"/>
-            <path d="M17 5.2 H20.4 V7.4 A3.4 3.4 0 0 1 17 10.8"/>
-            <path d="M12 14.5 V18.5"/>
-            <path d="M8.4 21.4 H15.6"/>
-            <path d="M9.6 18.5 H14.4 V21.4"/>
+      <div class="item">
+        <div class="row">
+          <div>
+            <div class="kicker">Africa &middot; Obituary</div>
+            <h3>Phumzile Mlambo-Ngcuka, 1955&ndash;2026</h3>
+            <p>South Africa&rsquo;s first woman deputy president, later head of UN Women, died at 71 after complications from a medical procedure.</p>
+            <div class="fact"><b>&#9632;</b> Tributes came from President Ramaphosa, the ANC and Ant&oacute;nio Guterres.</div>
+          </div>
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#17130e" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M10.5 11h7v13h-7z"/>
+            <path d="M14 5.2c1.6 1.9 2.4 3.3 2.4 4.4 0 1.3-1.1 2.2-2.4 2.2s-2.4-.9-2.4-2.2c0-1.1.8-2.5 2.4-4.4z" stroke="#b31b1b" stroke-width="1.6"/>
+            <path d="M14 5.2v1.6" stroke="#b31b1b"/>
+            <path d="M7.5 24h13" stroke-width="1.8"/>
           </svg>
         </div>
-        <h3>Antonelli fastest, but Verstappen takes pole</h3>
-        <p>A five-place engine penalty dropped the new champion to sixth in Las Vegas. Both Ferraris were out
-        in Q2; Russell starts alongside the Red Bull.</p>
-        <p class="dek2">The race itself runs on Saturday night under the lights on the Strip.</p>
-        <div class="brief"><span class="b">&#9632;</span><span>It is the first time no Ferrari has reached Q3
-        since the Canadian Grand Prix of 2024.</span></div>
       </div>
+    </div>
+  </div>
 
+  <div class="grid">
+    <div class="cell">
+      <div class="kh">
+        <span class="kicker">Americas &middot; Markets</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6">
+          <path d="M2 4v16h20"/>
+          <path d="M5 8l5 6 4-8 6 10" stroke="#b31b1b" stroke-width="1.9"/>
+        </svg>
+      </div>
+      <h3>The AI trade cracks and the Nasdaq loses its 2026 gains</h3>
+      <p>Down 5.28% to 22,617.73, erasing its 2026 gains in the worst week since 2020. Nvidia slid 14%.</p>
     </div>
 
-  </section>
+    <div class="cell">
+      <div class="kh">
+        <span class="kicker">Europe &middot; Budget</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6">
+          <circle cx="12" cy="12" r="9.5"/>
+          <path d="M12 6v12M15 8.6c-.7-1-1.8-1.5-3-1.5-1.7 0-2.9.8-2.9 2.2 0 1.4 1.2 1.9 3 2.3 2 .4 3.1 1 3.1 2.5s-1.3 2.3-3.2 2.3c-1.4 0-2.5-.5-3.2-1.6" stroke="#b31b1b" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <h3>Brussels proposes a levy on Big Tech to fund its budget</h3>
+      <p>Ant&oacute;nio Costa&rsquo;s draft cuts &euro;204bn from the 2028&ndash;34 plan and taxes large digital firms. Leaders meet on Thursday.</p>
+    </div>
 
-  <!-- footer -->
-  <div class="foot">
-    <span>The World Ledger <span class="dots">&middot;</span> Saturday 21 November 2026</span>
-    <span>Compiled from wire reports &middot; page 1 of 1</span>
+    <div class="cell">
+      <div class="kh">
+        <span class="kicker">Asia &middot; Diplomacy</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6">
+          <circle cx="12" cy="12" r="9.5"/>
+          <path d="M2.5 12h19M12 2.5c3.2 3 4.8 6.2 4.8 9.5S15.2 18.5 12 21.5M12 2.5c-3.2 3-4.8 6.2-4.8 9.5S8.8 18.5 12 21.5"/>
+        </svg>
+      </div>
+      <h3>Xi leaves the summit season holding the stronger hand</h3>
+      <p>Reuters: three Trump&ndash;Xi meetings this year left Washington with little to show. The trade truce expires on 10 January.</p>
+    </div>
+
+    <div class="cell">
+      <div class="kh">
+        <span class="kicker">Science &middot; Space</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6">
+          <circle cx="12" cy="12" r="5.4"/>
+          <ellipse cx="12" cy="12" rx="10.8" ry="4.6" transform="rotate(-24 12 12)"/>
+          <circle cx="20.2" cy="7.6" r="1.7" fill="#b31b1b" stroke="none"/>
+        </svg>
+      </div>
+      <h3>BepiColombo begins its arrival at Mercury</h3>
+      <p>Eight years and nine gravity assists after launch, Europe&rsquo;s and Japan&rsquo;s paired orbiters start a 16-burn capture sequence.</p>
+    </div>
+
+    <div class="cell">
+      <div class="kh">
+        <span class="kicker">Middle East &middot; Gaza</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6">
+          <path d="M4 20h16"/>
+          <path d="M6 20V11l6-6 6 6v9"/>
+          <path d="M10 20v-5h4v5" stroke="#b31b1b" stroke-width="1.6"/>
+        </svg>
+      </div>
+      <h3>A strike on a car in Gaza City kills three</h3>
+      <p>Wafa and Al Jazeera reported the hit in Tel al-Hawa. More than 1,600 Palestinians have been killed since the October 2025 ceasefire.</p>
+    </div>
+
+    <div class="cell">
+      <div class="kh">
+        <span class="kicker">Americas &middot; Sport</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#17130e" stroke-width="1.6">
+          <path d="M4 19h16"/>
+          <path d="M5 19v-5h4v-3h6v3h4v5"/>
+          <circle cx="7" cy="19" r="2.1"/><circle cx="17" cy="19" r="2.1"/>
+          <path d="M12 2.5v6" stroke="#b31b1b"/>
+          <path d="M12 2.5 16 5l-4 2.5" fill="#b31b1b" stroke="#b31b1b"/>
+        </svg>
+      </div>
+      <h3>Antonelli fastest, but Verstappen takes the pole</h3>
+      <p>A five-place engine penalty dropped the new champion to sixth in Las Vegas. Both Ferraris went out in Q2.</p>
+    </div>
+  </div>
+
+  <div class="ticker">
+    <span class="label">Also today</span>
+    <div class="items">
+      <span><b>Bitcoin</b> slid to $55,106, below $57,000 for the first time in two years; $2.4bn of futures were liquidated.</span>
+      <span><b>Poland:</b> two Russian missiles and a suspected drone came down on its territory, Warsaw said, calling it a likely provocation.</span>
+      <span><b>VIX:</b> Wall Street&rsquo;s fear gauge touched its highest level of 2026 before easing.</span>
+    </div>
   </div>
 
 </div>
